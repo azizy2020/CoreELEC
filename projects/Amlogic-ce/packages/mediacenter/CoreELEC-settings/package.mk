@@ -2,15 +2,15 @@
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
 PKG_NAME="CoreELEC-settings"
-PKG_VERSION="5eac7b498f3d0041ca9cf7f8f5b2de9641418ece"
-PKG_SHA256="ca87ef25f2693ebddc06bf7e57dcfdc6b4c5d9ccc95d90f6a14532a41930cf75"
+PKG_VERSION="e5ffe169ba5d96302b2708ea42551b7c65d9c602"
+PKG_SHA256="be1a2ab27fa99c31d09332d62c81b6f3732eb698a21b1865c78bcc1f328bb516"
 PKG_LICENSE="GPL"
 PKG_SITE="https://coreelec.org"
 PKG_URL="https://github.com/CoreELEC/service.coreelec.settings/archive/$PKG_VERSION.tar.gz"
 PKG_DEPENDS_TARGET="toolchain Python3 connman pygobject dbus-python"
 PKG_LONGDESC="CoreELEC-settings: is a settings dialog for CoreELEC"
 
-PKG_MAKE_OPTS_TARGET="DISTRONAME=$DISTRONAME ROOT_PASSWORD=$ROOT_PASSWORD"
+PKG_MAKE_OPTS_TARGET="DISTRONAME=$DISTRONAME ADDON_VERSION=$ADDON_VERSION ROOT_PASSWORD=$ROOT_PASSWORD"
 
 if [ "$DISPLAYSERVER" = "x11" ]; then
   PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET setxkbmap"
